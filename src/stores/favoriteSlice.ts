@@ -22,7 +22,7 @@ export const createFavoritesSlice: StateCreator<FavoritesSliceType & RecipesSlic
             set(state => ({
                 favorites: [...state.favorites, recipe]
             }))
-            createNotificatonSlice(set, get, api).showNotification({ text: 'Se agregó de favoritos', error: false })
+            createNotificatonSlice(set, get, api).showNotification({ text: 'Se agregó a favoritos', error: false })
         }
         createRecipesSlice(set, get, api).closeModal()
         localStorage.setItem('favorites', JSON.stringify(get().favorites))
